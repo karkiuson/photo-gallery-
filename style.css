@@ -1,8 +1,17 @@
 
+/* =========================
+   YUSHAN KARKI WEBSITE
+   SHARED CSS FOR ALL PAGES
+========================= */
+
 * {
     margin: 0;
     padding: 0;
     box-sizing: border-box;
+}
+
+html {
+    scroll-behavior: smooth;
 }
 
 body {
@@ -11,11 +20,13 @@ body {
     color: white;
     font-family: Arial, sans-serif;
     display: flex;
-    justify-content: center;
+    flex-direction: column;
     align-items: center;
     overflow-x: hidden;
     padding: 25px;
 }
+
+/* BACKGROUND ANIMATION */
 
 .background-glow {
     position: fixed;
@@ -28,19 +39,28 @@ body {
     left: 10%;
     animation: float 7s infinite alternate;
     pointer-events: none;
+    z-index: -1;
 }
 
 @keyframes float {
-    from { transform: translate(0, 0); }
-    to { transform: translate(180px, 100px); }
+    from {
+        transform: translate(0, 0);
+    }
+
+    to {
+        transform: translate(180px, 100px);
+    }
 }
 
-.login-container, .dashboard {
+/* MAIN CONTAINER */
+
+.dashboard {
     position: relative;
     z-index: 1;
     width: 100%;
-    max-width: 450px;
+    max-width: 850px;
     padding: 40px;
+    margin: 35px auto;
     background: rgba(255,255,255,0.06);
     border: 1px solid rgba(255,255,255,0.12);
     border-radius: 24px;
@@ -54,11 +74,14 @@ body {
         opacity: 0;
         transform: translateY(30px);
     }
+
     to {
         opacity: 1;
         transform: translateY(0);
     }
 }
+
+/* LOGO */
 
 .logo {
     font-size: 35px;
@@ -70,6 +93,8 @@ body {
     color: #9c83ff;
 }
 
+/* TEXT */
+
 .subtitle {
     color: #a38cff;
     font-size: 11px;
@@ -79,34 +104,21 @@ body {
 
 h1 {
     font-size: 32px;
-    margin-bottom: 12px;
+    margin-bottom: 15px;
 }
 
-.description, .admin-card p {
+.description {
     color: #aaaabb;
-    font-size: 14px;
-    line-height: 1.7;
+    font-size: 15px;
+    line-height: 2;
+    white-space: pre-line;
     margin-bottom: 25px;
 }
 
-input {
-    width: 100%;
-    padding: 16px;
-    margin: 9px 0;
-    border-radius: 12px;
-    border: 1px solid #303044;
-    background: #151525;
-    color: white;
-    outline: none;
-}
-
-input:focus {
-    border-color: #9c83ff;
-}
+/* BUTTONS */
 
 button {
-    width: 100%;
-    padding: 16px;
+    padding: 16px 25px;
     margin-top: 15px;
     border: none;
     border-radius: 12px;
@@ -122,63 +134,133 @@ button:hover {
     box-shadow: 0 8px 25px #7656ff55;
 }
 
+.next-page {
+    margin-top: 35px;
+    text-align: center;
+}
+
+a {
+    text-decoration: none;
+}
+
+/* QUIZ PAGE */
+
+.quiz {
+    max-width: 750px;
+}
+
+.question {
+    background: rgba(255,255,255,0.05);
+    border: 1px solid rgba(163,140,255,0.25);
+    border-radius: 16px;
+    padding: 22px;
+    margin: 20px 0;
+    transition: 0.3s ease;
+}
+
+.question:hover {
+    border-color: #a38cff;
+    transform: translateY(-3px);
+}
+
+.question h3 {
+    font-size: 16px;
+    line-height: 1.6;
+    margin-bottom: 18px;
+}
+
+.question label {
+    display: inline-flex;
+    align-items: center;
+    gap: 8px;
+    margin-right: 25px;
+    color: #ddd;
+    cursor: pointer;
+}
+
+.question input[type="radio"] {
+    width: auto;
+    margin: 0;
+    accent-color: #a38cff;
+}
+
+.question p {
+    margin-top: 15px;
+    font-size: 14px;
+    font-weight: bold;
+}
+
+.correct {
+    color: #6de6a2;
+}
+
+.wrong {
+    color: #ff7777;
+}
+
+#score {
+    text-align: center;
+    color: #a38cff;
+    margin: 25px 0;
+    font-size: 25px;
+}
+
+.back-button {
+    background: #29243e;
+}
+
+/* FOOTER */
+
 .footer {
+    position: relative;
+    z-index: 1;
     color: #77778a;
     text-align: center;
     font-size: 12px;
-    margin-top: 35px;
+    margin: 30px 0;
 }
+
+/* HIDDEN ELEMENTS */
 
 .hidden {
     display: none !important;
 }
 
-.dashboard {
-    max-width: 650px;
-}
+/* MOBILE RESPONSIVE */
 
-.topbar {
-    display: flex;
-    justify-content: space-between;
-    align-items: center;
-}
+@media (max-width: 600px) {
 
-.logout {
-    width: auto;
-    padding: 10px 20px;
-    margin: 0;
-    background: #29243e;
-}
+    body {
+        padding: 12px;
+    }
 
-.admin-card {
-    padding: 23px;
-    margin-top: 20px;
-    background: rgba(255,255,255,0.05);
-    border: 1px solid #303044;
-    border-radius: 17px;
-}
+    .dashboard {
+        padding: 25px 20px;
+        margin: 20px auto;
+    }
 
-.admin-card h2 {
-    font-size: 19px;
-    margin-bottom: 12px;
-}
+    h1 {
+        font-size: 27px;
+    }
 
-.admin-card p {
-    margin-bottom: 15px;
-}
+    .description {
+        font-size: 14px;
+        line-height: 1.9;
+    }
 
-.status {
-    color: #6de6a2;
-    font-size: 12px;
-    letter-spacing: 2px;
-}
+    .question {
+        padding: 18px;
+    }
 
-.preview {
-    display: block;
-    max-width: 100%;
-    max-height: 300px;
-    margin: 20px auto 0;
-    border-radius: 15px;
-    object-fit: contain;
-}
+    .question h3 {
+        font-size: 15px;
+    }
 
+    .question label {
+        margin-right: 15px;
+    }
+
+    button {
+        max-width: 100%;
+    }
+}
