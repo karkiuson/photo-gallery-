@@ -1,0 +1,83 @@
+
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Yushan Karki | Q&A</title>
+    <link rel="stylesheet" href="style.css">
+</head>
+
+<body>
+
+<div class="background-glow"></div>
+
+<main class="dashboard quiz">
+
+    <p class="subtitle">GET TO KNOW ME</p>
+    <h1>How Well Do You Know Yushan?</h1>
+
+    <p class="description">
+        Answer these five questions about me.
+        Let's see how well you know my story!
+    </p>
+
+    <form id="quizForm">
+
+        <div class="question">
+            <h3>1. Did Yushan change himself from the past?</h3>
+            <label><input type="radio" name="q1" value="yes"> Yes</label>
+            <label><input type="radio" name="q1" value="no"> No</label>
+            <p id="result1"></p>
+        </div>
+
+        <div class="question">
+            <h3>2. Does Yushan have a girlfriend?</h3>
+            <label><input type="radio" name="q2" value="yes"> Yes</label>
+            <label><input type="radio" name="q2" value="no"> No</label>
+            <p id="result2"></p>
+        </div>
+
+        <div class="question">
+            <h3>3. Is Yushan a playboy?</h3>
+            <label><input type="radio" name="q3" value="yes"> Yes</label>
+            <label><input type="radio" name="q3" value="no"> No</label>
+            <p id="result3"></p>
+        </div>
+
+        <div class="question">
+            <h3>4. Is Yushan always lonely at home?</h3>
+            <label><input type="radio" name="q4" value="yes"> Yes</label>
+            <label><input type="radio" name="q4" value="no"> No</label>
+            <p id="result4"></p>
+        </div>
+
+        <div class="question">
+            <h3>5. Does Yushan like physical sports?</h3>
+            <label><input type="radio" name="q5" value="yes"> Yes</label>
+            <label><input type="radio" name="q5" value="no"> No</label>
+            <p id="result5"></p>
+        </div>
+
+        <button type="submit">Submit My Answers ↗</button>
+
+    </form>
+
+    <h2 id="score"></h2>
+
+    <button type="button" id="retryBtn" class="hidden">
+        Try Again
+    </button>
+
+    <a href="index.html">
+        <button type="button" class="back-button">
+            ← Back to Home
+        </button>
+    </a>
+
+</main>
+
+<script src="qna.js"></script>
+
+</body>
+</html>
