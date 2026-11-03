@@ -339,3 +339,17 @@ a {
 .hidden {
     display: none !important;
 }
+.qna-btn {
+    display: inline-block;
+    padding: 12px 25px;
+    background: #6c63ff;
+    color: white;
+    text-decoration: none;
+    border-radius: 10px;
+    margin-top: 20px;
+    font-weight: bold;
+}
+
+.qna-btn:hover {
+    background: #5148d9;
+}
