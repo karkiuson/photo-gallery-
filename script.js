@@ -1,47 +1,98 @@
 
-const loginForm = document.getElementById("loginForm");
-const loginPage = document.getElementById("loginPage");
-const dashboard = document.getElementById("dashboard");
-const message = document.getElementById("message");
+document.addEventListener("DOMContentLoaded", function () {
 
-loginForm.addEventListener("submit", function(event) {
-    event.preventDefault();
+    // SMOOTH SCROLLING
+    document.querySelectorAll('a[href^="#"]').forEach(link => {
+        link.addEventListener("click", function (event) {
+            const target = document.querySelector(
+                this.getAttribute("href")
+            );
 
-    const username = document.getElementById("username").value;
-    const password = document.getElementById("password").value;
+            if (target) {
+                event.preventDefault();
 
-    // Demo credentials only
-    if (username === "yushan" && password === "demo123") {
-        loginPage.classList.add("hidden");
-        dashboard.classList.remove("hidden");
+                target.scrollIntoView({
+                    behavior: "smooth"
+                });
+            }
+        });
+    });
+
+    // AUTOMATIC FOOTER YEAR
+    const year = document.getElementById("year");
+
+    if (year) {
+        year.textContent = new Date().getFullYear();
+    }
+
+    // SCROLL REVEAL ANIMATION
+    const revealElements = document.querySelectorAll(".reveal");
+
+    if ("IntersectionObserver" in window) {
+
+        const observer = new IntersectionObserver(
+            function (entries) {
+
+                entries.forEach(entry => {
+
+                    if (entry.isIntersecting) {
+                        entry.target.classList.add("active");
+                        observer.unobserve(entry.target);
+                    }
+
+                });
+
+            },
+            {
+                threshold: 0.15
+            }
+        );
+
+        revealElements.forEach(element => {
+            observer.observe(element);
+        });
+
     } else {
-        message.textContent = "Incorrect username or password!";
-        message.style.color = "#ff6b6b";
-    }
-});
 
-// Logout
-document.getElementById("logoutBtn").addEventListener("click", function() {
-    dashboard.classList.add("hidden");
-    loginPage.classList.remove("hidden");
-    loginForm.reset();
-});
+        revealElements.forEach(element => {
+            element.classList.add("active");
+        });
 
-// Photo preview
-document.getElementById("photoInput").addEventListener("change", function(event) {
-    const file = event.target.files[0];
-
-    if (!file) return;
-
-    if (!file.type.startsWith("image/")) {
-        alert("Please select an image.");
-        return;
     }
 
-    const imageURL = URL.createObjectURL(file);
-    const preview = document.getElementById("preview");
+    // NAVBAR SCROLL EFFECT
+    const navbar = document.querySelector(".navbar");
 
-    preview.src = imageURL;
-    preview.classList.remove("hidden");
+    window.addEventListener("scroll", function () {
+
+        if (navbar) {
+            navbar.classList.toggle(
+                "scrolled",
+                window.scrollY > 50
+            );
+        }
+
+    });
+
+    // BACK TO TOP BUTTON
+    const backToTop = document.getElementById("backToTop");
+
+    if (backToTop) {
+
+        window.addEventListener("scroll", function () {
+            backToTop.classList.toggle(
+                "show",
+                window.scrollY > 300
+            );
+        });
+
+        backToTop.addEventListener("click", function () {
+            window.scrollTo({
+                top: 0,
+                behavior: "smooth"
+            });
+        });
+
+    }
+
 });
-
