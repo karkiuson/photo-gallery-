@@ -1,2 +1,0 @@
-# photo-gallery-
-My personal 
