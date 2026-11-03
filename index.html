@@ -1,63 +1,87 @@
+
 <!DOCTYPE html>
 <html lang="en">
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Yushan Karki | Admin</title>
+
+    <title>Yushan Karki | Personal Website</title>
+
     <link rel="stylesheet" href="style.css">
 </head>
+
 <body>
 
     <div class="background-glow"></div>
 
-    <main class="login-container" id="loginPage">
+    <nav class="topbar">
         <div class="logo">YK<span>.</span></div>
-        <p class="subtitle">PERSONAL WEBSITE</p>
 
-        <h1>Welcome Back</h1>
-        <p class="description">Sign in to your admin dashboard.</p>
+        <a href="#home">Home</a>
+        <a href="#about">About</a>
+        <a href="#gallery">Gallery</a>
+    </nav>
 
-        <form id="loginForm">
-            <input type="text" id="username"
-                   placeholder="Username" required>
+    <main class="dashboard" id="home">
 
-            <input type="password" id="password"
-                   placeholder="Password" required>
+        <p class="subtitle">WELCOME TO MY WORLD</p>
 
-            <button type="submit">Enter Dashboard ↗</button>
-        </form>
+        <h1>
+            I'm <span style="color:#a38cff;">
+                Yushan Karki
+            </span>
+        </h1>
 
-        <p id="message"></p>
-        <p class="footer">© 2026 Yushan Karki</p>
+        <p class="description">
+            A little space on the internet that belongs to me.
+            My memories, my journey, and my story.
+        </p>
+
+        <a href="#about">
+            <button>Explore My World ↗</button>
+        </a>
+
     </main>
 
-    <main class="dashboard hidden" id="dashboard">
-        <div class="topbar">
-            <div class="logo">YK<span>.</span></div>
-            <button class="logout" id="logoutBtn">Log out</button>
+    <section class="dashboard" id="about">
+
+        <p class="subtitle">GET TO KNOW ME</p>
+
+        <h1>About Me</h1>
+
+        <p class="description">
+            Hello! I'm Yushan Karki.
+            Welcome to my personal website.
+            This is where I share my memories,
+            interests, and special moments.
+        </p>
+
+    </section>
+
+    <section class="dashboard" id="gallery">
+
+        <p class="subtitle">MY MEMORIES</p>
+
+        <h1>Photo Gallery</h1>
+
+        <p class="description">
+            A collection of moments from my journey.
+        </p>
+
+        <div id="galleryPhotos">
+            <p class="description">
+                My photos will appear here.
+            </p>
         </div>
 
-        <p class="subtitle">ADMIN CONTROL CENTER</p>
-        <h1>Hello, Yushan 👋</h1>
-        <p class="description">Manage your personal website.</p>
+    </section>
 
-        <section class="admin-card">
-            <h2>📸 Upload a Photo</h2>
-            <p>Choose a photo to preview it.</p>
-            <input type="file" id="photoInput" accept="image/*">
-            <img id="preview" class="preview hidden" alt="Photo preview">
-        </section>
-
-        <section class="admin-card">
-            <h2>✨ Website Status</h2>
-            <p>Your admin dashboard is running.</p>
-            <span class="status">● ONLINE</span>
-        </section>
-
-        <p class="footer">Yushan Karki | Admin Panel</p>
-    </main>
+    <footer class="footer">
+        © 2026 Yushan Karki. All rights reserved.
+    </footer>
 
     <script src="script.js"></script>
+
 </body>
 </html>
 
