@@ -4,7 +4,7 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Yushan Karki | Admin</title>
+    <title>Yushan Karki | Admin Panel</title>
     <link rel="stylesheet" href="style.css">
 </head>
 <body>
@@ -12,11 +12,12 @@
     <div class="background-glow"></div>
 
     <main class="login-container" id="loginPage">
+
         <div class="logo">YK<span>.</span></div>
-        <p class="subtitle">PERSONAL WEBSITE</p>
+        <p class="subtitle">PRIVATE ADMIN ACCESS</p>
 
         <h1>Welcome Back</h1>
-        <p class="description">Sign in to your admin dashboard.</p>
+        <p class="description">Login to manage your website.</p>
 
         <form id="loginForm">
             <input type="text" id="username"
@@ -25,30 +26,28 @@
             <input type="password" id="password"
                 placeholder="Password" required>
 
-            <button type="submit">Enter Dashboard ↗</button>
+            <button type="submit">Login ↗</button>
         </form>
 
         <p id="message"></p>
         <p class="footer">© 2026 Yushan Karki</p>
+
     </main>
 
     <main class="dashboard hidden" id="dashboard">
 
         <div class="topbar">
             <div class="logo">YK<span>.</span></div>
-            <button class="logout" id="logoutBtn">Log out</button>
+            <button class="logout" id="logoutBtn">Logout</button>
         </div>
 
         <p class="subtitle">ADMIN CONTROL CENTER</p>
-
-        <h1>Hello, Yushan 👋</h1>
-        <p class="description">
-            Manage your personal website.
-        </p>
+        <h1>Welcome, Yushan 👋</h1>
+        <p class="description">Manage your personal website.</p>
 
         <section class="admin-card">
-            <h2>📸 Upload a Photo</h2>
-            <p>Choose a photo to preview it.</p>
+            <h2>📸 Photo Manager</h2>
+            <p>Select a photo to preview.</p>
 
             <input type="file" id="photoInput" accept="image/*">
 
@@ -57,16 +56,17 @@
         </section>
 
         <section class="admin-card">
-            <h2>✨ Website Status</h2>
-            <p>Your admin dashboard is running.</p>
+            <h2>Website Status</h2>
             <span class="status">● ONLINE</span>
         </section>
 
-        <p class="footer">Yushan Karki | Admin Panel</p>
+        <p class="footer">Yushan Karki | Admin Dashboard</p>
 
     </main>
 
     <script src="script.js"></script>
+
 </body>
 </html>
+ 
 
