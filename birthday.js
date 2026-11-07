@@ -9,38 +9,48 @@ function checkAnswer(choice) {
 
     const isBirthday = month === 11 && day === 19;
 
-    // Birthday date: November 19
     if (isBirthday) {
 
         if (choice === "birthday") {
             result.innerHTML =
                 "🎂 MY BIRTHDAY IS TODAY! 🎉<br>You got it right!";
-        } else if (choice === "gta") {
+        } 
+        
+        else if (choice === "gta") {
             result.innerHTML =
                 "🎮 Today is GTA 6!<br>But you missed something...<br>🎂 MY BIRTHDAY IS TODAY!";
-        } else if (choice === "world") {
+        } 
+        
+        else if (choice === "world") {
             result.innerHTML =
                 "🌍 World Toilet Day!<br>But today is also MY BIRTHDAY! 🎂";
-        } else {
+        } 
+        
+        else {
             result.innerHTML =
-                : "🎂 MY BIRTHDAY IS TODAY! 🎉";
+                "🎂 MY BIRTHDAY IS TODAY! 🎉";
         }
 
     } 
     
-    // Other dates
     else {
 
         if (choice === "birthday") {
             result.innerHTML =
-                "😏 Not today! Keep guessing!";
-        } else if (choice === "gta") {
+                "😏 MY BIRTHDAY IS TODAY! 🎂";
+        } 
+        
+        else if (choice === "gta") {
             result.innerHTML =
                 "🎮 GTA 6? Interesting choice!";
-        } else if (choice === "world") {
+        } 
+        
+        else if (choice === "world") {
             result.innerHTML =
                 "🌍 World Toilet Day!";
-        } else {
+        } 
+        
+        else {
             result.innerHTML =
                 "👀 Maybe you missed something!";
         }
