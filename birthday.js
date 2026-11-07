@@ -9,34 +9,41 @@ function checkAnswer(choice) {
 
     const isBirthday = month === 11 && day === 19;
 
-    if (choice === "birthday") {
+    // Birthday date: November 19
+    if (isBirthday) {
 
-        result.innerHTML = isBirthday
-            ? "🎂 MY BIRTHDAY IS TODAY! 🎉<br>You got it right!"
-            : "😏 Not today! My birthday is November 19.";
+        if (choice === "birthday") {
+            result.innerHTML =
+                "🎂 MY BIRTHDAY IS TODAY! 🎉<br>You got it right!";
+        } else if (choice === "gta") {
+            result.innerHTML =
+                "🎮 Today is GTA 6!<br>But you missed something...<br>🎂 MY BIRTHDAY IS TODAY!";
+        } else if (choice === "world") {
+            result.innerHTML =
+                "🌍 World Toilet Day!<br>But today is also MY BIRTHDAY! 🎂";
+        } else {
+            result.innerHTML =
+                "😑 NOTHING SPECIAL?!<br>MY BIRTHDAY IS TODAY! 🎂";
+        }
 
-    }
+    } 
+    
+    // Other dates
+    else {
 
-    else if (choice === "gta") {
-
-        result.innerHTML = isBirthday
-            ? "🎮 Today is GTA 6!<br>But you missed something...<br>IT'S MY BIRTHDAY TOO! 🎂"
-            : "🎮 GTA 6? Interesting choice!";
-
-    }
-
-    else if (choice === "world") {
-
-        result.innerHTML =
-            "🌍 World Toilet Day!<br>But did you forget something special?";
-
-    }
-
-    else if (choice === "none") {
-
-        result.innerHTML = isBirthday
-            ? "😑 NOTHING SPECIAL?!<br>IT'S MY BIRTHDAY! 🎂"
-            : "👀 Maybe you missed something!";
+        if (choice === "birthday") {
+            result.innerHTML =
+                "😏 Not today! Keep guessing!";
+        } else if (choice === "gta") {
+            result.innerHTML =
+                "🎮 GTA 6? Interesting choice!";
+        } else if (choice === "world") {
+            result.innerHTML =
+                "🌍 World Toilet Day!";
+        } else {
+            result.innerHTML =
+                "👀 Maybe you missed something!";
+        }
 
     }
 
