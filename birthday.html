@@ -1,1 +1,47 @@
 
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Special Day?</title>
+    <link rel="stylesheet" href="style.css">
+</head>
+<body>
+
+    <div class="container">
+        <h1>🎉 A Little Question</h1>
+
+        <p class="question">
+            Is there anything special about today?
+        </p>
+
+        <div class="options">
+
+            <button onclick="checkAnswer('gta')">
+                🎮 Release of GTA 6
+            </button>
+
+            <button onclick="checkAnswer('birthday')">
+                🎂 Yushan's Birthday
+            </button>
+
+            <button onclick="checkAnswer('world')">
+                🌍 World Toilet Day
+            </button>
+
+            <button onclick="checkAnswer('none')">
+                ❌ Nothing Special
+            </button>
+
+        </div>
+
+        <div id="result"></div>
+
+    </div>
+
+    <script src="script.js"></script>
+    
+</body>
+</html>
+
