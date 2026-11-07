@@ -23,7 +23,7 @@ function checkAnswer(choice) {
                 "🌍 World Toilet Day!<br>But today is also MY BIRTHDAY! 🎂";
         } else {
             result.innerHTML =
-                "😑 NOTHING SPECIAL?!<br>MY BIRTHDAY IS TODAY! 🎂";
+                : "🎂 MY BIRTHDAY IS TODAY! 🎉";
         }
 
     } 
